@@ -28,6 +28,16 @@
       margin: 4px 1px;
     }
   </style>
+  <script>
+    function collapse(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf('w3-show') == -1) {
+        x.className += ' w3-show';
+      } else {
+        x.className = x.className.replace(' w3-show', '');
+      }
+    }
+  </script>
   <body class="w3-light-grey">
     <!-- Page Container -->
     <div class="w3-content w3-margin-top" style="max-width: 1400px;">
@@ -127,9 +137,9 @@
           <div class="w3-container w3-card w3-white w3-margin-bottom">
             <h2 class="w3-text-grey w3-padding-16">
               <i
-                class="fa fa-sort fa-fw w3-margin-right w3-xxlarge w3-text-teal"
+                class="fa fa-puzzle-piece fa-fw w3-margin-right w3-xxlarge w3-text-teal"
               ></i
-              >Latest
+              >Simples
             </h2>
             <div class="w3-container">
               <h5 class="w3-opacity">
@@ -192,13 +202,16 @@
           </div>
 
           <div class="w3-container w3-card w3-white w3-margin-bottom">
-            <h2 class="w3-text-grey w3-padding-16">
+            <h2
+              onclick="collapse('work-exp')"
+              class="w3-text-grey w3-block w3-padding-16"
+            >
               <i
                 class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"
               ></i
               >Work Experience
             </h2>
-            <div class="w3-container">
+            <div id="work-exp" class="w3-container w3-hide">
               <h5 class="w3-opacity">
                 <b>Frontend Developer / Netaa</b>
               </h5>
@@ -236,13 +249,16 @@
           </div>
 
           <div class="w3-container w3-card w3-white w3-margin-bottom">
-            <h2 class="w3-text-grey w3-padding-16">
+            <h2
+              onclick="collapse('edu')"
+              class="w3-text-grey w3-block w3-padding-16"
+            >
               <i
                 class="fa fa-certificate fa-fw w3-margin-right w3-xxlarge w3-text-teal"
               ></i
               >Education
             </h2>
-            <div class="w3-container">
+            <div id="edu" class="w3-container w3-hide">
               <h5 class="w3-opacity"><b>Sheikhbahaee University</b></h5>
               <h6 class="w3-text-teal">
                 <i class="fa fa-calendar fa-fw w3-margin-right"></i>Oct 2015 -
